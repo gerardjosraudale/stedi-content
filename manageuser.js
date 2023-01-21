@@ -45,7 +45,18 @@ function checkexpiredtoken(token){
         dataType: 'text' })
     }
 }
+function oneTimePassword(){
+    
+    $.ajax({
+        type: 'POST',
+        url: 'https://dev.stedi.me/twofactorlogin/3852990135',
+        data: JSON.stringify({userName, password}),
+        
+        contentType: "application/text",
+        dataType: 'text'
+    });
 
+}
 function userlogin(){
     setuserpassword();
     setusername();
